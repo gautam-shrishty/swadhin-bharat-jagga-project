@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slider using css</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .slider{
+            width:100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows: repeat(10,1fr);
+        }
+        .slide {
+            grid-column: 5/6;
+            grid-row: 5/6;
+           opacity: 0.3;
+            width: 750px;
+            height: 350px;
+            background-image: url('india-heritage-1.jpg');
+            
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: slide 50s infinite;
+        }
+        @keyframes slide {
+            25%{
+                background-image: url('india-heritage-2.jpg');
+                transition-timing-function: ease-in-out;
+            }
+            50%{
+                background-image: url('india-heritage-4.jpg');
+                transition-timing-function: ease-in-out;
+            }
+            100%{
+                background-image: url('46c19e889ed0268a53c8874d8341ea2f_1499352214.jpg');
+                transition-timing-function: ease-in-out;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide"></div>
+
+    </div>
+</body>
+</html>

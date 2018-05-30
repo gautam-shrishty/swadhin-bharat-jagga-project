@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating css arrow-1</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: rgba(240, 128, 128, 1);
+	}
+		.main-content{
+			width: 100vw;
+			height: 100vh;
+			display: grid;
+			grid-template-columns: repeat(10,0.5fr);
+			grid-template-rows:  repeat(10,0.5fr);
+		}
+		#intro-text{
+			grid-column: 5/8;
+			grid-row: 5/6;
+		}
+		#arrow-container{
+			width: 50px;
+			height: 50px;
+			grid-column: 10/11;
+			grid-row: 9/11;
+		    
+		}
+		#arrow{
+			
+			display: block;
+			position: relative;
+			font-size: 48px;
+		    transform: rotate(90deg);
+		    content: "\00BB";
+		    color: yellow;
+		    animation: bouncerarrow 1s infinite;
+		}
+		@keyframes bouncerarrow{
+			0%{top: 0px;
+				opacity: 0;
+			}
+			50%{top: 20px; color: white;
+				opacity: 2;
+			}
+			60%{
+				top: 0;
+				opacity: 1
+			}
+			100%{top: 0px;
+				opacity: 0;}
+
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="main-content">
+	<div id="intro-text">
+	<h1>Know Once Golden Bird</h1>	
+	</div>
+	<div id="arrow-container"><span id="arrow">&#187;</span></div>
+</div>
+
+</body>
+</html>

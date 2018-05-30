@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>basic slider</title>
+    <style>
+        #slideshow-container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .slidefade{
+           display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    </style>
+</head>
+<body>
+    <div id="slideshow-container">
+      <div class="slidefade fade">
+          <img src="india-heritage-1.jpg" alt="slide1">
+      </div>
+
+      <div class="slidefade fade">
+            <img src="8bb2d93d79615465ee35fb9adb94932c_1499352685.jpg" alt="slide1">
+        </div>
+
+        <div class="slidefade fade">
+                <img src="04c19fa1e772ab66f0aad2efe61f25cd_1499352606.jpg" alt="slide1">
+            </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for(i=0;i<slide.length;i++) {
+        slides[i].style.display = "none"
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}   
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000);
+}
+
+    </script>
+    
+</body>
+</html>

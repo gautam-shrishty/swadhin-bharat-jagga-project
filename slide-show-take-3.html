@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slideshow-3</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-image: url('cropped-yoga.jpg');
+        background-blend-mode: lighten;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: slide 50s infinite;
+    }
+    #main{
+            display: grid;
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows: repeat(10,1fr);
+            width: 100vw;
+            height: 100vh;
+           
+        }
+        #text{
+            grid-column: 4/10;
+            grid-row: 1/2;
+            width: 500px;
+            height: 100px;
+            
+        }
+        h1{
+            margin: 10px;
+            font-size: 40px;
+            font-family: 'impact';
+            color: white;
+            
+        }
+
+    @keyframes slide {
+            20%{
+                background-image: url('slide-2.jpg');
+                transition-timing-function: ease-in-out;
+                
+            }
+             40%{
+                background-image: url('flowers-lake-nature-white-yellow-lotus-flower-rain-flori-dew-water-green-drops-leaf-wallpapers-hd-download.jpg');
+                
+                transition-timing-function: ease-in-out;
+
+            }
+            60%{
+                background-image: url('slide-4.jpg');
+                
+                transition-timing-function: ease-in-out;
+            }
+            80%{
+                background-image: url('slide-5.jpg');
+                
+                transition-timing-function: ease-in-out;
+                }
+            100%{
+                background-image: url('404903-sanskrit2.jpg');
+                
+                transition-timing-function: ease-in-out;
+            }
+            
+        }
+        #arrow-container{
+            width: 100px;
+			height: 100px;
+			grid-column: 6/7;
+			grid-row: 10/11;
+		    
+        }
+        #arrow{
+            margin: 20px;
+			display: block;
+			position: relative;
+            text-align: center;
+			font-size: 48px;
+		    transform: rotate(90deg);
+		    content: "\00BB";
+		    color: yellow;
+		    animation: bouncerarrow 1s infinite;
+        }
+        @keyframes bouncerarrow{
+			0%{top: 0px;
+				opacity: 0;
+			}
+			50%{top: 20px; color: blue;
+				opacity: 2;
+			}
+			60%{
+				top: 0;
+				opacity: 1
+			}
+			100%{top: 0px;
+				opacity: 0;}
+
+		}
+		
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="text">
+          <h1>India <img src="equal.jpg" alt="not-equal" width="50px" height="30px"> Bharat</h1> 
+        </div>
+        <div id="arrow-container"><a href="#"><span id="arrow">&#187;</span></a></div>
+        
+    </div>
+    
+</body>
+</html>

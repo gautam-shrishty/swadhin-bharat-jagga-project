@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slideshow-div</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container .slide{
+        width: 100vw;
+        height: 100vh;
+        animation: slide 20s infinite;
+        }
+        @keyframes slide {
+            20%{
+                background-image: url('slide-2.jpg');
+                transition-timing-function: ease-in-out;
+            }
+             40%{
+                background-image: url('slide-3.jpg');
+              
+                transition-timing-function: ease-in-out;
+            }
+            60%{
+                background-image: url('slide-4.jpg');
+               
+                transition-timing-function: ease-in-out;
+            }
+            80%{
+                background-image: url('slide-5.jpg');
+              
+                transition-timing-function: ease-in-out;
+                }
+            100%{
+                background-image: url('slide-6.jpg');
+                
+                transition-timing-function: ease-in-out;
+            }
+                        
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <img src="slide-1.jpg" alt="">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
